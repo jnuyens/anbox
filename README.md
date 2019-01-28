@@ -92,7 +92,7 @@ $ sudo apt install build-essential cmake cmake-data debhelper dbus google-mock \
     libboost-thread-dev libcap-dev libsystemd-dev libegl1-mesa-dev \
     libgles2-mesa-dev libglm-dev libgtest-dev liblxc1 \
     libproperties-cpp-dev libprotobuf-dev libsdl2-dev libsdl2-image-dev lxc-dev \
-    pkg-config protobuf-compiler 
+    pkg-config protobuf-compiler libdwarf-dev  libbfd-dev  libdw-dev
 ```
 We recommend Ubuntu 18.04 (bionic) with **GCC 7.x** as your build environment.
 
@@ -106,7 +106,7 @@ $ git clone https://github.com/anbox/anbox.git
 $ cd anbox
 $ mkdir build
 $ cd build
-$ cmake ..
+$ cmake .. -DANDROID_ABI=arm64-v8a -DCMAKE_BUILD_TYPE=Release
 $ make
 ```
 
